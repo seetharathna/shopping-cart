@@ -48,7 +48,7 @@ class GuidesController < ApplicationController
     respond_to do |format|
       if @guide.save
         flash[:notice] = 'Guide was successfully created.'
-        format.html { redirect_to(@guide) }
+        format.html { redirect_to(guides_path) }
         format.xml  { render :xml => @guide, :status => :created, :location => @guide }
       else
         format.html { render :action => "new" }
