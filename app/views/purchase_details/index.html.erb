@@ -1,0 +1,24 @@
+<h2>Purchase details</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+
+<% @purchase_details.each do |purchase_detail| %>
+  <tr>
+    <td><%=h purchase_detail.customer_name %></td>
+    <td><%=h purchase_detail.customer_email%></td>
+
+    <td><%= link_to 'Show', purchase_detail %></td>
+    
+    <!--<td><%= link_to 'Edit', edit_purchase_detail_path(purchase_detail) %></td>
+    <td><%= link_to 'Destroy', purchase_detail, :confirm => 'Are you sure?', :method => :delete %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<!--<%= link_to 'New purchase_detail', new_purchase_detail_path %>-->

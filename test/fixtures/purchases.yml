@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  guide_id: 1
+  purchase_details_id: 1
+  key: 1
+
+two:
+  user_id: 1
+  guide_id: 1
+  purchase_details_id: 1
+  key: 1

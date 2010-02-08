@@ -1,0 +1,30 @@
+<h2>Guides</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Guide</th>
+  </tr>
+
+<% @guides.each do |guide| %>
+  <tr>
+    <td><%=h guide.name %></td>
+    <td><%=h guide.description %></td>
+    <td><%=h guide.category %></td>
+    <td><%=h guide.price %></td>
+    <td><%= link_to 'Purchase', new_purchase_detail_path(:guide => guide.id)%>
+    <td><%= link_to 'Click here', download_guides_path(:id =>guide)%></td>
+    <!--<td><%= link_to 'Show', guide %></td>
+    <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
+    <td><%= link_to 'Destroy', guide, :confirm => 'Are you sure?', :method => :delete %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<!--<%= link_to 'New guide', new_guide_path %>-->
+

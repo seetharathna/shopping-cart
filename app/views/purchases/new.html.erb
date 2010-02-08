@@ -1,0 +1,27 @@
+<h1>New purchase</h1>
+
+<% form_for(@purchase) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :guide_id %><br />
+    <%= f.text_field :guide_id %>
+  </p>
+  <p>
+    <%= f.label :purchase_details_id %><br />
+    <%= f.text_field :purchase_details_id %>
+  </p>
+  <p>
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', purchases_path %>

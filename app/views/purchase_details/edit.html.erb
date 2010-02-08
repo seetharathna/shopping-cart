@@ -1,0 +1,20 @@
+<h1>Edit purchase detail</h1>
+
+<% form_for(@purchase_detail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :payment %><br />
+    <%= f.text_field :payment %>
+  </p>
+  <p>
+    <%= f.label :ip %><br />
+    <%= f.text_field :ip %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @purchase_detail %> |
+<%= link_to 'Back', purchase_details_path %>

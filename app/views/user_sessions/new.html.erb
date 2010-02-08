@@ -1,0 +1,28 @@
+
+<div id = "header">
+  <h2>Login</h2>
+</div>
+
+<% form_for @user_session do |f| %>
+  <%= f.error_messages %>
+ 
+ <table class = "login" align = "left">
+  <tr>
+    <th>User name</th>
+    <td><%= f.text_field :username %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label :password %></th>
+    <td><%= f.password_field :password %></td>
+  </tr>
+
+  <tr></tr>
+
+  <tr>
+   <td></td>
+   <td><%= f.submit "Submit" %></td>
+  </tr>
+
+ </table>
+<% end %>

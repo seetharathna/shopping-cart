@@ -1,0 +1,23 @@
+
+
+<div id = "image1"></div>
+<%= link_to 'Click here to download', download_guides_path(:id => @guide)%>
+
+<p>
+  <b>Name:</b>
+  <%=h @guide.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @guide.category %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @guide.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>

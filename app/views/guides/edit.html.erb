@@ -1,0 +1,28 @@
+<h2>Edit guide</h2>
+
+<% form_for(@guide) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%=f.select :category ,[["---Select---",""],["Stagg party", "Stagg party"], ["Hen party", "Hen party"]] %> 
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @guide %> |
+<%= link_to 'Back', guides_path %>

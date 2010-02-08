@@ -1,0 +1,23 @@
+<p>
+  <b>User:</b>
+  <%=h @purchase.user_id %>
+</p>
+
+<p>
+  <b>Guide:</b>
+  <%=h @purchase.guide_id %>
+</p>
+
+<p>
+  <b>Purchase details:</b>
+  <%=h @purchase.purchase_details_id %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%=h @purchase.key %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>

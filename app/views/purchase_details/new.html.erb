@@ -1,0 +1,29 @@
+<h2>Enter the following details</h2>
+
+<% form_for(@purchase_detail) do |f| %>
+  <%= f.error_messages %>
+  
+  <%= hidden_field_tag :purchase_detail_id, :purchase_detail_id %>
+
+  <%= hidden_field_tag 'guide_id', @guide.id %>
+
+  
+  <p>
+    Name<br />
+    <%= f.text_field :customer_name %>
+  </p>
+
+  <p>
+    Email<br />
+    <%= f.text_field :customer_email %>
+  </p>
+
+  
+  <p>
+    <%= image_submit_tag "order-now.jpg" %> | <%= link_to 'Cancel', guides_path %>
+  </p>
+<% end %>
+
+
+
+
