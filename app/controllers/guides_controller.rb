@@ -43,6 +43,7 @@ class GuidesController < ApplicationController
   # POST /guides.xml
   def create
     @guide = Guide.new(params[:guide])
+    @guide.secret_code = Guide.secret_code
 
     respond_to do |format|
       if @guide.save
